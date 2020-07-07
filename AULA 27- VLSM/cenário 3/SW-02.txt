@@ -1,0 +1,22 @@
+enable
+conf t
+hostname SW-AC2
+vlan 210
+name JUR
+vlan 150
+name CONT
+interface f0/1
+switchport mode access
+switchport access vlan 210
+interface f0/24
+switchport mode access
+switchport access vlan 150
+interface g0/1
+switchport mode trunk
+switchport trunk allowed vlan 210,150
+interface range f0/2-23
+shutdown
+interface g0/2
+shutdown
+do wr 
+

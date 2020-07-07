@@ -1,0 +1,20 @@
+enable
+conf t
+hostname R-CORE
+interface g0/0/0
+no shutdown
+interface g0/0/0.30
+encapsulation dot1q 30
+ip address 192.168.0.254 255.255.255.0
+interface g0/0/0.60
+encapsulation dot1q 60
+ip address 192.168.2.46 255.255.255.240
+interface g0/0/0.90
+encapsulation dot1q 90
+ip address 192.168.1.254 255.255.255.0
+interface g0/0/0.120
+encapsulation dot1q 120
+ip address 192.168.2.30 255.255.255.224
+do wr
+
+

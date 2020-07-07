@@ -1,0 +1,28 @@
+enable
+conf t
+hostname SW-CORE
+vlan 20
+name CALL CENTER
+vlan 60
+name TI
+vlan 80
+name CONT
+vlan 40
+name JUR
+interface g0/1
+switchport mode trunk
+switchport trunk allowed vlan 20,60,40,80
+interface g1/1
+switchport mode trunk
+switchport trunk allowed vlan 20,60,40,80
+interface g2/1
+switchport mode trunk
+switchport trunk allowed vlan 20,60,40,80
+do wr 
+
+
+
+
+
+
+
